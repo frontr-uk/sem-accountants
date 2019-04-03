@@ -1,0 +1,32 @@
+<html>
+<head>Sembler Accoutants</head>
+<body>
+
+<script>
+    (function() {
+        console.log('test')
+        const domains = [
+            "https://www.domain1.com",
+            "https://www.domaine2.com"
+        ]
+        window.addEventListener("message", messageHandler, false);
+        function messageHandler(event) {
+            if (!domains.includes(event.origin))
+                return;
+            const { action, key, value } = event.data
+            if (action == 'save'){
+                window.localStorage.setItem(key, JSON.stringify(value))
+            } else if (action == 'get') {
+                const keyT =  JSON.parse(window.localStorage.getItem(key));
+                event.source.postMessage({
+                    action: 'returnData',
+                    key,
+                   keyT
+                }, '*')
+            }
+        }
+    })()
+
+</script>
+</body>
+</html>

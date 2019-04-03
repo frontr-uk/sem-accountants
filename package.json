@@ -1,0 +1,21 @@
+{
+  "name": "sembler-accountants",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frontruk/sembler.git"
+  },
+  "contributors": [
+    "Chris Tarasovs <chris@frontr.co.uk>"
+  ],
+  "scripts": {
+    "start": "http-server ./index.html -p 9002"
+  },
+  "pre-commit": [],
+  "private": true,
+  "dependencies": {
+    "http-server": "^0.11.1"
+  },
+  "devDependencies": {}
+}
