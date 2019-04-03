@@ -18,6 +18,6 @@ EXPOSE 8080
 
 #RUN npm run start
 # Start server
-CMD ["http-server", "-s"]
+#CMD ["http-server", "-s"]
 #CMD [ "http-server ./index.html -p 9002" ]
 #CMD ["http-server ./index.html -s -p 9002"]
