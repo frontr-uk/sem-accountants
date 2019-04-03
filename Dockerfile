@@ -16,4 +16,4 @@ RUN npm install
 EXPOSE 9002
 
 # Start server
-CMD [ "node", "http-server ./index.html -p 9002" ]
+CMD [ "http-server ./index.html -p 9002" ]
