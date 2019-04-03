@@ -11,9 +11,11 @@ COPY . /app
 # specify working directory
 WORKDIR /app
 RUN npm install
+RUN npm install gloabll http-server
 
 # Expose port for the container
 EXPOSE 9002
 
+RUN npm run start
 # Start server
-CMD [ "http-server ./index.html -p 9002" ]
+#CMD [ "http-server ./index.html -p 9002" ]

@@ -14,8 +14,6 @@
   },
   "pre-commit": [],
   "private": true,
-  "dependencies": {
-    "http-server": "^0.11.1"
-  },
+  "dependencies": {},
   "devDependencies": {}
 }
