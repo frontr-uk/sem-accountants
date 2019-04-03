@@ -10,7 +10,7 @@
     "Chris Tarasovs <chris@frontr.co.uk>"
   ],
   "scripts": {
-    "start": "http-server ./index.html -p 9002"
+    "start": "http-server ./index.html -s -p 9002"
   },
   "pre-commit": [],
   "private": true,
