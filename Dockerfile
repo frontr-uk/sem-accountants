@@ -14,7 +14,7 @@ RUN npm install
 RUN npm install global http-server
 
 # Expose port for the container
-EXPOSE 9002
+EXPOSE 8080
 
 RUN npm run start
 # Start server
