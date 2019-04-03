@@ -11,7 +11,7 @@ COPY . /app
 # specify working directory
 WORKDIR /app
 RUN npm install
-RUN npm install gloabll http-server
+RUN npm install global http-server
 
 # Expose port for the container
 EXPOSE 9002
