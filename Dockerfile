@@ -14,7 +14,7 @@ RUN npm install global http-server
 
 WORKDIR /app
 # Expose port for the container
-#EXPOSE 8080
+EXPOSE 8080
 
 #RUN npm run start
 # Start server
