@@ -8,7 +8,9 @@
         const domains = [
             "http://localhost:4200",
             "http://5c7c5227724ec11aba1fe397.sembler.io",
-            "http://5c818042efa620d29359c892.sembler.io"
+            "http://5c818042efa620d29359c892.sembler.io",
+            "http://www.sembler.io",
+            "http://sembler.io"
         ]
         window.addEventListener("message", messageHandler, false);
         function messageHandler(event) {
@@ -16,8 +18,10 @@
                 return;
             const { action, key, value } = event.data
             if (action == 'save'){
+                console.log('saving');
                 window.localStorage.setItem(key, JSON.stringify(value))
             } else if (action == 'get') {
+                onsole.log('get');
                 const keyT =  JSON.parse(window.localStorage.getItem(key));
                 event.source.postMessage({
                     action: 'returnData',
