@@ -14,6 +14,7 @@
         ]
         window.addEventListener("message", messageHandler, false);
         function messageHandler(event) {
+            console.log('event.origin', event.origin)
             if (!domains.includes(event.origin))
                 return;
             const { action, key, value } = event.data
