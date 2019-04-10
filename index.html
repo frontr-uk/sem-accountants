@@ -19,10 +19,10 @@
             // if (!domains.includes(event.origin))
             //     return;
             const { action, key, value } = event.data
-            if (action == 'save'){
+            if (action === 'save'){
                 console.log('saving');
-                window.localStorage.setItem(key, JSON.stringify(value))
-            } else if (action == 'get') {
+                window.localStorage.setItem(key, value)
+            } else if (action === 'get') {
                 console.log('get');
                 const keyT =  JSON.parse(window.localStorage.getItem(key));
                 event.source.postMessage({
