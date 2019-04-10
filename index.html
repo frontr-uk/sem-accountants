@@ -24,7 +24,7 @@
                 window.localStorage.setItem(key, value)
             } else if (action === 'get') {
                 console.log('get');
-                const keyT =  JSON.parse(window.localStorage.getItem(key));
+                const keyT =  window.localStorage.getItem(key);
                 event.source.postMessage({
                     action: 'returnData',
                     key,
