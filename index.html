@@ -11,7 +11,12 @@
             "http://5c818042efa620d29359c892.sembler.io",
             "http://www.sembler.io",
             "http://sembler.io",
-            "sembler.io"
+            "sembler.io",
+            "http://5c7c5227724ec11aba1fe397.sembler.page",
+            "http://5c818042efa620d29359c892.sembler.page",
+            "http://www.sembler.page",
+            "http://sembler.page",
+            "sembler.page"
         ]
         window.addEventListener("message", messageHandler, false);
         function messageHandler(event) {
@@ -19,9 +24,17 @@
             // if (!domains.includes(event.origin))
             //     return;
             const { action, key, value } = event.data
+            // if (action !== 'save' &&  action !== 'get' && window.localStorage.getItem('token') === undefined)
+            //     return false;
+
             if (action === 'save'){
                 console.log('saving');
                 window.localStorage.setItem(key, value)
+                event.source.postMessage({
+                    action: 'savedSuccess',
+                    key,
+                    keyT
+                }, '*')
             } else if (action === 'get') {
                 console.log('get');
                 const keyT =  window.localStorage.getItem(key);
